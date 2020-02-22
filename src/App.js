@@ -1,6 +1,8 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
+
 import './App.css';
+
 import { Homepage } from './pages/homepage/Homepage';
 import {Header} from './components/header/header'
 import Shop from './pages/shop/shop';
@@ -29,12 +31,11 @@ class App extends React.Component {
             ...snapShot.data()
           })
         });
-      } else {
+      } 
         this.setState({ currentUser: userAuth })
-      }
     })
   }
-
+  
   componentWillUnmount() {
     this.unsubscribeFromAuth();
   }
