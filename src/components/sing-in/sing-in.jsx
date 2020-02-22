@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { FormInput } from '../form-input/form-input';
 
-import './sing-ing.stles.scss'
+import './sing-in.stles.scss'
 import { CustomButton } from '../custom-button/custom-button';
 import { singInWithGoogle } from '../firebase/firebase.utils';
 
@@ -21,11 +21,11 @@ export default class SingIn extends Component {
         this.setState({email: '', password: ''})
     }
 
-    handleChange = e => {
-        const { value, name } = e.targer;
-
-        this.setState({[name]: value})
-    }
+    handleChange = event => {
+        const { value, name } = event.target;
+    
+        this.setState({ [name]: value });
+      };
 
     render() {
         return (
