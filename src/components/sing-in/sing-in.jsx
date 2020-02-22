@@ -47,9 +47,10 @@ export default class SingIn extends Component {
                         label="password"
                         value={this.state.password}
                         handleChange={this.handleChange} />
-                    
-                    <CustomButton type="submit">Sing In</CustomButton>
-                    <CustomButton onClick={singInWithGoogle} >Sing In with Google</CustomButton>
+                    <div className="buttons">
+                        <CustomButton type="submit">Sing In</CustomButton>
+                        <CustomButton onClick={singInWithGoogle} isGoogleSingIn >Sing In with Google</CustomButton>
+                    </div>
                 </form>
             </div>
         )
