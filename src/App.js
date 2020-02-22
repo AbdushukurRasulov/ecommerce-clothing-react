@@ -5,6 +5,7 @@ import { Homepage } from './pages/homepage/Homepage';
 import {Header} from './components/header/header'
 import Shop from './pages/shop/shop';
 import { Account } from './pages/account/account';
+import SingIn from './components/sing-in/sing-in';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route exact path="/" component={Homepage} />
         <Route path="/shop" component={Shop} />
         <Route path="/account" component={Account} />
+        <Route path="/singin" component={SingIn} />
       </Switch>
     </div>
   );

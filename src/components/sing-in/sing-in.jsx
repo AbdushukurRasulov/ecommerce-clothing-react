@@ -3,6 +3,7 @@ import { FormInput } from '../form-input/form-input';
 
 import './sing-ing.stles.scss'
 import { CustomButton } from '../custom-button/custom-button';
+import { singInWithGoogle } from '../firebase/firebase.utils';
 
 export default class SingIn extends Component {
     constructor() {
@@ -48,6 +49,7 @@ export default class SingIn extends Component {
                         handleChange={this.handleChange} />
                     
                     <CustomButton type="submit">Sing In</CustomButton>
+                    <CustomButton onClick={singInWithGoogle} >Sing In with Google</CustomButton>
                 </form>
             </div>
         )
