@@ -6,7 +6,7 @@ import './header.styles.scss'
 import { auth } from '../../firebase/firebase.utils';
 import { connect } from 'react-redux';
 import CartIcon  from '../cart-icon/cart-icon';
-import { CartDropdown } from '../cart-dropdown/cart-dropdown';
+import CartDropdown from '../cart-dropdown/cart-dropdown';
 
 const Header = ({currentUser, hidden}) => (
     <div className="header">
