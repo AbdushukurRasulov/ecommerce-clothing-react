@@ -3,7 +3,7 @@ import React from 'react'
 import './collection-preview.styles.scss'
 import CollectionItem  from '../collection-item/collection-item'
 
-export const CollectionPreview = ({title, items}) => (
+export const CollectionPreview = ({title, items, history, match, routeName}) => (
     <div className="collection-preview">
         <h1 className="title">{title.toUpperCase()}</h1>
         <div className="preview">
@@ -14,3 +14,6 @@ export const CollectionPreview = ({title, items}) => (
         </div>
     </div>
 )
+
+
+//  onClick={() => history.push(`${match.path}/${routeName}`)}
