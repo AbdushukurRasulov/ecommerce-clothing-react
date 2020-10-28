@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { useState } from 'react'
 
 import { FormInput } from '../form-input/form-input';
 import { CustomButton } from '../custom-button/custom-button';
@@ -7,17 +7,9 @@ import { auth, singInWithGoogle } from '../../firebase/firebase.utils';
 
 import './sing-in.styles.scss'
 
-export default class SingIn extends Component {
-    constructor() {
-        super()
-        
-        this.state = {
-            email: '',
-            password: ''
-        }
-    }
+const SingIn = () =>  {
 
-    handleSubmit = async e => {
+    const handleSubmit = async e => {
         e.preventDefault();
 
         const { email, password } = this.state;
@@ -30,13 +22,13 @@ export default class SingIn extends Component {
         }
     }
 
-    handleChange = event => {
+    const handleChange = event => {
         const { value, name } = event.target;
     
         this.setState({ [name]: value });
       };
 
-    render() {
+
         return (
             <div className="sing-in">
                 <h2>I already have an account</h2>
@@ -64,4 +56,4 @@ export default class SingIn extends Component {
             </div>
         )
     }
-}
+export default SingIn;
